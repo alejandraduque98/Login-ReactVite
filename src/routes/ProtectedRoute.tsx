@@ -6,7 +6,7 @@ import { Outlet, Navigate } from "react-router-dom"
 
 export default function ProtectedRoute() {
      //creamos un stado de autenticacion
-     const [isAuth, setIsAuth]=useState(false);
+     const [isAuth, setIsAuth]=useState(true);
     
      return(
         // si isAuth es verdara muestre el contenido<Outlet> y si no envialo a login
