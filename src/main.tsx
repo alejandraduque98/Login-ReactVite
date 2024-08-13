@@ -9,6 +9,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './routes/Login.tsx'
 import Singup from './routes/Singup.tsx'
 import Dashboard from './routes/Dashboard.tsx'
+import ProtectedRoute from './routes/ProtectedRoute.tsx'
+import { AuthProvider } from './auth/AuthProvider.tsx'
 
 const router = createBrowserRouter([
   {
@@ -20,14 +22,22 @@ const router = createBrowserRouter([
     element: <Singup/>,
   },
   {
-    path: "/Dasboard",
-    element: <Dashboard/>,
+    path: "/",
+    element: <ProtectedRoute/>,
+    children:[(
+      {
+        path:"Dashboard",
+        element:<Dashboard/>,
+      }
+    )]
   },
 ])
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <AuthProvider>
+      <RouterProvider router={router}/>
+    </AuthProvider>
   </StrictMode>,
 )
