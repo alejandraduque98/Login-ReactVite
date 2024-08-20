@@ -12,7 +12,7 @@ const AuthContext = createContext({
     isAuthenticated: false,
 })
 
-export function AuthProvider({children}: AuthProviderProps){
+export function AuthProvider({ children }: AuthProviderProps){
     //Vamos a validar que exista la autenficación desde la info que enviamos del backen al front-end
     const [isAuthenticated, setisAuthenticated]= useState(true);
     //nota: cuando tengamos el back const [isAuthenticated, setisAuthenticated]= useState(cambiaomos este avlor segun retorne node.js);
