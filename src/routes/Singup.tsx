@@ -20,7 +20,7 @@ export default function Singup(){
     return (
         
         <DefaultLayout>
-            <form action="">
+            <form className="form" action="">
             
                 <h1>SingUp</h1>
 
@@ -33,7 +33,7 @@ export default function Singup(){
                 <label htmlFor="">Pasword</label>
                 <input type="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
 
-                <button>CreateUser</button>
+                <button>Create User</button>
             </form>
         </DefaultLayout>  
         
