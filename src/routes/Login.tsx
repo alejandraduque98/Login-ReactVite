@@ -16,7 +16,7 @@ export default function Login(){
 
     return(
         <DefaultLayout>
-            <form action="">
+            <form className="form" action="">
             
             <h1>Login</h1>
 
