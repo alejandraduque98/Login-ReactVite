@@ -17,6 +17,7 @@ export default function Singup(){
     if(auth.isAuthenticated){
         return <Navigate to="/Dashboard"/>
     }
+    
     return (
         
         <DefaultLayout>
